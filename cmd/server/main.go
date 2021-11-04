@@ -104,5 +104,5 @@ Options:
 
 func printAsciiArt() {
 	// https://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=Project
-	fmt.Println(aurora.Green(` FXProxy PROJECT`))
+	fmt.Println(aurora.Green(` VatValidator PROJECT`))
 }
