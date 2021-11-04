@@ -1,0 +1,8 @@
+version: '3.3'
+
+services:
+  vat_validator:
+    container_name: vat_validator
+    build: .
+    ports:
+    - "8082:8082"
