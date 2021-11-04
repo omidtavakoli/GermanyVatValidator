@@ -29,12 +29,12 @@ func NewServer(cfg *MainConfig, logger *logger.StandardLogger) *Server {
 func (s *Server) Initialize(ctx context.Context) error {
 	v := validator.New()
 
-	appClient, err := EU_VIES.NewClient(&s.Config.App, v)
+	appClient, err := EU_VIES.NewClient(&s.Config.EuVies)
 	if err != nil {
 		return err
 	}
 
-	service := validationService.CreateService(&s.Config.Proxy, appClient, s.Logger, v)
+	service := validationService.CreateService(&s.Config.Validator, appClient, s.Logger, v)
 	handler := rest.CreateHandler(service)
 	s.RESTHandler = handler
 	return nil

@@ -15,9 +15,9 @@ import (
 
 var (
 	cfg = MainConfig{
-		Logger: logger.Config{},
-		Proxy:  validator.Config{},
-		Server: ServerConfig{},
+		Logger:    logger.Config{},
+		Validator: validator.Config{},
+		Server:    ServerConfig{},
 	}
 	ctx = context.Background()
 )
@@ -54,11 +54,6 @@ func TestServer(t *testing.T) {
 			description:        "417 expectation failed",
 			url:                "%s/validator/vat/sd45f768",
 			expectedStatusCode: http.StatusExpectationFailed,
-		},
-		{
-			description:        "200 ok",
-			url:                "%s/validator/vat/DE156129043",
-			expectedStatusCode: http.StatusOK,
 		},
 		{
 			description:        "417 expectation failed",

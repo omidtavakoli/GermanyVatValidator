@@ -9,5 +9,7 @@ LOGGER:
   GRAYLOG_SERVER: "localhost"
   GRAYLOG_STREAM: "VAT_ID_VALIDATOR"
   DISABLE_STDOUT: false
-VAT_ID_VALIDATOR:
-  DEFAULT_TTL: 43200
+VALIDATOR:
+
+EU_VIES:
+  URL: "http://ec.europa.eu/taxation_customs/vies/services/checkVatService"

@@ -18,14 +18,14 @@ type Handler struct {
 		ContainerName   string
 		BinaryStartTime time.Time
 	}
-	HTTPServer   *http.Server
-	ProxyService validator.Service
+	HTTPServer       *http.Server
+	ValidatorService validator.Service
 }
 
 // CreateHandler Creates a new instance of REST handler
-func CreateHandler(proxyService validator.Service) *Handler {
+func CreateHandler(validatorService validator.Service) *Handler {
 	return &Handler{
-		ProxyService: proxyService,
+		ValidatorService: validatorService,
 	}
 }
 

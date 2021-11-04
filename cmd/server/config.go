@@ -17,10 +17,10 @@ type ServerConfig struct {
 }
 
 type MainConfig struct {
-	Logger logger.Config    `yaml:"LOGGER"`
-	Proxy  validator.Config `yaml:"VAT_ID_VALIDATOR"`
-	Server ServerConfig     `yaml:"SERVER"`
-	App    EU_VIES.Config   `yaml:"APP"`
+	Logger    logger.Config    `yaml:"LOGGER"`
+	Validator validator.Config `yaml:"VALIDATOR"`
+	Server    ServerConfig     `yaml:"SERVER"`
+	EuVies    EU_VIES.Config   `yaml:"EU_VIES"`
 }
 
 // LoadConfig loads configs form provided yaml file or overrides it with env variables

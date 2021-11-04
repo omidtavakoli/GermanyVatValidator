@@ -6,7 +6,7 @@ type MockProxyService struct {
 	mock.Mock
 }
 
-func (m *MockProxyService) VatValidator() (string, error) {
-	args := m.Called()
-	return "", args.Error(1)
+func (m *MockProxyService) VatValidator(vatNum string) (bool, error) {
+	args := m.Called(vatNum)
+	return true, args.Error(1)
 }
